@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD1E9AA124440AC400ED0B07 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1E9AA024440AC400ED0B07 /* CanvasView.swift */; };
 		FDC900C6244348DC000FF012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC900C5244348DC000FF012 /* AppDelegate.swift */; };
 		FDC900C8244348DC000FF012 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC900C7244348DC000FF012 /* SceneDelegate.swift */; };
 		FDC900CA244348DC000FF012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC900C9244348DC000FF012 /* ViewController.swift */; };
 		FDC900CD244348DC000FF012 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC900CB244348DC000FF012 /* Main.storyboard */; };
 		FDC900CF244348DD000FF012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDC900CE244348DD000FF012 /* Assets.xcassets */; };
 		FDC900D2244348DD000FF012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC900D0244348DD000FF012 /* LaunchScreen.storyboard */; };
+		FDE490AF245282F700F87E22 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE490AE245282F700F87E22 /* Line.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD1E9AA024440AC400ED0B07 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		FDC900C2244348DC000FF012 /* freeland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = freeland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC900C5244348DC000FF012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDC900C7244348DC000FF012 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		FDC900CE244348DD000FF012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDC900D1244348DD000FF012 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDC900D3244348DD000FF012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDE490AE245282F700F87E22 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD1E9A9F24440AA500ED0B07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD1E9AA024440AC400ED0B07 /* CanvasView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FD1E9AA224440B7600ED0B07 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				FDC900C9244348DC000FF012 /* ViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
 		FDC900B9244348DB000FF012 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +76,25 @@
 		FDC900C4244348DC000FF012 /* freeland */ = {
 			isa = PBXGroup;
 			children = (
+				FDE490AD245282E200F87E22 /* Models */,
+				FD1E9AA224440B7600ED0B07 /* controller */,
+				FD1E9A9F24440AA500ED0B07 /* View */,
 				FDC900C5244348DC000FF012 /* AppDelegate.swift */,
 				FDC900C7244348DC000FF012 /* SceneDelegate.swift */,
-				FDC900C9244348DC000FF012 /* ViewController.swift */,
 				FDC900CB244348DC000FF012 /* Main.storyboard */,
 				FDC900CE244348DD000FF012 /* Assets.xcassets */,
 				FDC900D0244348DD000FF012 /* LaunchScreen.storyboard */,
 				FDC900D3244348DD000FF012 /* Info.plist */,
 			);
 			path = freeland;
+			sourceTree = "<group>";
+		};
+		FDE490AD245282E200F87E22 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDE490AE245282F700F87E22 /* Line.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +170,9 @@
 			files = (
 				FDC900CA244348DC000FF012 /* ViewController.swift in Sources */,
 				FDC900C6244348DC000FF012 /* AppDelegate.swift in Sources */,
+				FD1E9AA124440AC400ED0B07 /* CanvasView.swift in Sources */,
 				FDC900C8244348DC000FF012 /* SceneDelegate.swift in Sources */,
+				FDE490AF245282F700F87E22 /* Line.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +319,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VN3S5J5DY2;
 				INFOPLIST_FILE = freeland/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +327,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Demo.freeland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,6 +338,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VN3S5J5DY2;
 				INFOPLIST_FILE = freeland/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +346,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Demo.freeland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
