@@ -36,18 +36,21 @@ class ViewController: UIViewController {
     
     let yellowButton:UIButton = {
         let button = UIButton(type: .system)
+        button.tag = 1
         button.backgroundColor = UIColor(white: 1, alpha: 0.7)
         button.addTarget(self, action: #selector(handleColorChange), for: .touchUpInside)
         return button
     }()
     let redButton:UIButton = {
         let button = UIButton(type: .system)
+        button.tag = 2
         button.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.7)
         button.addTarget(self, action: #selector(handleColorChange), for: .touchUpInside)
         return button
     }()
     let blueButton:UIButton = {
         let button = UIButton(type: .system)
+        button.tag = 3
         button.backgroundColor = UIColor(red: 0, green: 0, blue: 1, alpha: 0.7)
         button.addTarget(self, action: #selector(handleColorChange), for: .touchUpInside)
         return button
@@ -55,17 +58,29 @@ class ViewController: UIViewController {
     
     @objc fileprivate func handleColorChange(button :UIButton) {
          canvas.setStrokeColor(color: button.backgroundColor ?? .gray)
-        ischeck = true
-        if ischeck == true {
+        if button.tag == 1 {
             yellowButton.backgroundColor = UIColor.white
-            redButton.backgroundColor = UIColor.red
-            blueButton.backgroundColor = UIColor.blue
-        } else {
-            yellowButton.backgroundColor = UIColor(white: 1, alpha: 0.7)
             redButton.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.7)
             blueButton.backgroundColor = UIColor(red: 0, green: 0, blue: 1, alpha: 0.7)
+        } else if button.tag == 2 {
+            yellowButton.backgroundColor = UIColor(white: 1, alpha: 0.7)
+             redButton.backgroundColor = UIColor.red
+            blueButton.backgroundColor = UIColor(red: 0, green: 0, blue: 1, alpha: 0.7)
+        } else {
+            blueButton.backgroundColor = UIColor.blue
+            yellowButton.backgroundColor = UIColor(white: 1, alpha: 0.7)
+            redButton.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.7)
         }
-        ischeck = false
+//        if ischeck == true {
+//            yellowButton.backgroundColor = UIColor.white
+//            redButton.backgroundColor = UIColor.red
+//            blueButton.backgroundColor = UIColor.blue
+//        } else {
+//            yellowButton.backgroundColor = UIColor(white: 1, alpha: 0.7)
+//            redButton.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.7)
+//            blueButton.backgroundColor = UIColor(red: 0, green: 0, blue: 1, alpha: 0.7)
+//        }
+//        ischeck = false
         
     }
     
