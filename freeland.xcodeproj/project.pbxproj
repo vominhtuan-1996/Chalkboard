@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD3199ABA5CC70ECA602A697 /* Pods_freeland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46DC3FA00C64E3A85C3A26F2 /* Pods_freeland.framework */; };
 		FD1E9AA124440AC400ED0B07 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1E9AA024440AC400ED0B07 /* CanvasView.swift */; };
 		FDC900C6244348DC000FF012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC900C5244348DC000FF012 /* AppDelegate.swift */; };
 		FDC900C8244348DC000FF012 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC900C7244348DC000FF012 /* SceneDelegate.swift */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12441BB4B19C35DEFB1E3AEE /* Pods-freeland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freeland.debug.xcconfig"; path = "Target Support Files/Pods-freeland/Pods-freeland.debug.xcconfig"; sourceTree = "<group>"; };
+		46DC3FA00C64E3A85C3A26F2 /* Pods_freeland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_freeland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AF0E781A367FA1014287D27 /* Pods-freeland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freeland.release.xcconfig"; path = "Target Support Files/Pods-freeland/Pods-freeland.release.xcconfig"; sourceTree = "<group>"; };
 		FD1E9AA024440AC400ED0B07 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		FDC900C2244348DC000FF012 /* freeland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = freeland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC900C5244348DC000FF012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,12 +39,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD3199ABA5CC70ECA602A697 /* Pods_freeland.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		676E32FBBD9557EB848B6D34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46DC3FA00C64E3A85C3A26F2 /* Pods_freeland.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E5F7D12C6197B08A7C10E6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12441BB4B19C35DEFB1E3AEE /* Pods-freeland.debug.xcconfig */,
+				6AF0E781A367FA1014287D27 /* Pods-freeland.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FD1E9A9F24440AA500ED0B07 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +84,8 @@
 			children = (
 				FDC900C4244348DC000FF012 /* freeland */,
 				FDC900C3244348DC000FF012 /* Products */,
+				7E5F7D12C6197B08A7C10E6D /* Pods */,
+				676E32FBBD9557EB848B6D34 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +128,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDC900D6244348DD000FF012 /* Build configuration list for PBXNativeTarget "freeland" */;
 			buildPhases = (
+				E8CCABE5109971F6BF54D6A2 /* [CP] Check Pods Manifest.lock */,
 				FDC900BE244348DC000FF012 /* Sources */,
 				FDC900BF244348DC000FF012 /* Frameworks */,
 				FDC900C0244348DC000FF012 /* Resources */,
@@ -162,6 +187,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E8CCABE5109971F6BF54D6A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-freeland-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FDC900BE244348DC000FF012 /* Sources */ = {
@@ -314,10 +364,11 @@
 		};
 		FDC900D7244348DD000FF012 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12441BB4B19C35DEFB1E3AEE /* Pods-freeland.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VN3S5J5DY2;
+				DEVELOPMENT_TEAM = 7755R4CX4U;
 				INFOPLIST_FILE = freeland/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -333,10 +384,11 @@
 		};
 		FDC900D8244348DD000FF012 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AF0E781A367FA1014287D27 /* Pods-freeland.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VN3S5J5DY2;
+				DEVELOPMENT_TEAM = 7755R4CX4U;
 				INFOPLIST_FILE = freeland/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -11,6 +11,8 @@ class ViewController: UIViewController {
     var SCREEN_HEIGHT = UIScreen.main.bounds.size.height
     var ischeck = true
     let canvas = CanvasView()
+     
+    
     
     let tuanLable:UILabel = {
         let lable = UILabel()
